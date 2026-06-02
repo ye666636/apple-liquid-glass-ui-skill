@@ -1,6 +1,6 @@
 ---
 name: apple-liquid-glass-ui
-description: "Design and implement web interfaces inspired by Apple's Liquid Glass and Human Interface Guidelines. Use when asked to build or refine Apple-style UI, Liquid Glass web design, 苹果液态玻璃, iOS/macOS-like dashboards, app shells, toolbars, tabs, cards, modals, navigation, responsive product interfaces, or to review UI against Apple HIG principles while preserving accessibility and web platform constraints."
+description: "Design and implement web interfaces inspired by Apple's Liquid Glass and Human Interface Guidelines. Use when asked to build or refine Apple-style UI, Liquid Glass web design, iOS-like or macOS-like dashboards, app shells, toolbars, tabs, cards, modals, navigation, responsive product interfaces, or to review UI against Apple HIG principles while preserving accessibility and web platform constraints."
 ---
 
 # Apple Liquid Glass UI
