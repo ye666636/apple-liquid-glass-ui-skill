@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apple Liquid Glass UI"
+  short_description: "Apple-style glass UI for web apps"
+  default_prompt: "Use $apple-liquid-glass-ui to design or refine this web app UI with Apple-inspired Liquid Glass while preserving usability, contrast, and responsive behavior."
