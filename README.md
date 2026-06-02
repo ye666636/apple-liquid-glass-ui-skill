@@ -2,6 +2,8 @@
 
 An open-source Codex skill for designing and implementing web interfaces inspired by Apple's Liquid Glass direction and Human Interface Guidelines.
 
+![Apple-inspired Liquid Glass UI preview](assets/preview.png)
+
 This project helps AI coding agents create usable web app interfaces with clear hierarchy, restrained glass materials, responsive layout, accessible motion, and practical CSS implementation patterns.
 
 ## Quick Start
