@@ -1,5 +1,7 @@
 # Apple-Inspired Liquid Glass UI Skill
 
+[![Validate skill](https://github.com/ye666636/apple-liquid-glass-ui-skill/actions/workflows/validate.yml/badge.svg)](https://github.com/ye666636/apple-liquid-glass-ui-skill/actions/workflows/validate.yml)
+
 An open-source Codex skill for designing and implementing web interfaces inspired by Apple's Liquid Glass direction and Human Interface Guidelines.
 
 ![Apple-inspired Liquid Glass UI preview](assets/preview.png)
@@ -66,6 +68,23 @@ AI agents can produce attractive glassmorphism quickly, but they often overuse b
 ## Security and Privacy
 
 This repository is designed to contain only reusable public guidance. Please do not submit proprietary assets, private customer data, API keys, or confidential product code in issues or pull requests. See [SECURITY.md](SECURITY.md) for responsible reporting guidance.
+
+## Maintenance
+
+This project is maintained as a small, focused Codex skill. Changes should improve one of the following:
+
+- Skill trigger quality and agent behavior.
+- Web implementation guidance for accessible Liquid Glass-inspired UI.
+- Examples that make the skill easier to test and reuse.
+- Safety, privacy, licensing, or maintenance automation.
+
+Run the local validation script before opening a pull request:
+
+```powershell
+python .\scripts\validate_skill.py .\apple-liquid-glass-ui
+```
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines and [CHANGELOG.md](CHANGELOG.md) for release history.
 
 ## License
 

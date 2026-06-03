@@ -1,0 +1,22 @@
+name: Safety or privacy concern
+description: Report sensitive information, unsafe examples, or licensing concerns.
+title: "[Safety]: "
+labels: ["security", "privacy"]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not paste real secrets, API keys, customer data, or confidential details into a public issue."
+  - type: textarea
+    id: concern
+    attributes:
+      label: Concern
+      description: Describe the issue without exposing sensitive details.
+    validations:
+      required: true
+  - type: textarea
+    id: location
+    attributes:
+      label: Location
+      description: Link to the file, section, or pull request involved.
+    validations:
+      required: false

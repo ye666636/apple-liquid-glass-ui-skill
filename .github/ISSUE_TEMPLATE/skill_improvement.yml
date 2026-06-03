@@ -1,0 +1,26 @@
+name: Skill improvement
+description: Suggest a change to the skill guidance, examples, or references.
+title: "[Improvement]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What should improve?
+      description: Describe the behavior, guidance, example, or reference that should change.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed direction
+      description: Share the change you think would help.
+    validations:
+      required: false
+  - type: textarea
+    id: example
+    attributes:
+      label: Example prompt or UI scenario
+      description: Add a realistic prompt, UI task, or review scenario if useful.
+    validations:
+      required: false
