@@ -11,6 +11,17 @@ from pathlib import Path
 NAME_RE = re.compile(r"^[a-z0-9-]+$")
 NON_ASCII_RE = re.compile(r"[^\x00-\x7f]")
 TEXT_EXTENSIONS = {".md", ".yaml", ".yml", ".txt", ".gitignore"}
+REQUIRED_ROOT_FILES = [
+    "README.md",
+    "LICENSE",
+    "SECURITY.md",
+    "CONTRIBUTING.md",
+    "CHANGELOG.md",
+    ".github/workflows/validate.yml",
+    ".github/pull_request_template.md",
+    "assets/preview.png",
+    "examples/prompts.md",
+]
 
 
 def fail(message: str) -> None:
@@ -99,10 +110,40 @@ def validate_public_text(repo_root: Path) -> None:
             fail(f"Non-ASCII text found in {path}: {match.group(0)!r}")
 
 
+def validate_repo_files(repo_root: Path) -> None:
+    for relative in REQUIRED_ROOT_FILES:
+        path = repo_root / relative
+        if not path.exists():
+            fail(f"Missing required repository file: {relative}")
+
+    readme = read_text(repo_root / "README.md")
+    required_readme_bits = [
+        "assets/preview.png",
+        "Validate skill",
+        "python .\\scripts\\validate_skill.py .\\apple-liquid-glass-ui",
+        "CONTRIBUTING.md",
+        "CHANGELOG.md",
+    ]
+    for text in required_readme_bits:
+        if text not in readme:
+            fail(f"README.md is missing expected text: {text}")
+
+    workflow = read_text(repo_root / ".github" / "workflows" / "validate.yml")
+    if "python scripts/validate_skill.py apple-liquid-glass-ui" not in workflow:
+        fail("GitHub Actions workflow must run the local validator")
+
+    dependabot = repo_root / ".github" / "dependabot.yml"
+    if dependabot.exists():
+        content = read_text(dependabot)
+        if "github-actions" not in content:
+            fail("Dependabot config should cover GitHub Actions updates")
+
+
 def main(argv: list[str]) -> None:
     repo_root = Path(__file__).resolve().parents[1]
     skill_dir = Path(argv[1]).resolve() if len(argv) > 1 else repo_root / "apple-liquid-glass-ui"
     validate_skill(skill_dir)
+    validate_repo_files(repo_root)
     validate_public_text(repo_root)
     print("Skill package validation passed.")
 

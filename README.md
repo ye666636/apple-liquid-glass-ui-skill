@@ -84,6 +84,8 @@ Run the local validation script before opening a pull request:
 python .\scripts\validate_skill.py .\apple-liquid-glass-ui
 ```
 
+The GitHub Actions workflow runs the same validator on pushes and pull requests. Dependabot is configured to check GitHub Actions updates monthly.
+
 See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines and [CHANGELOG.md](CHANGELOG.md) for release history.
 
 ## License

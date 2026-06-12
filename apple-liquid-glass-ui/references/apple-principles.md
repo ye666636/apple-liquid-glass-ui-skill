@@ -1,6 +1,6 @@
 # Apple Principles for Liquid Glass Web UI
 
-Official sources checked on 2026-06-02:
+Official sources checked on 2026-06-12:
 
 - Apple Human Interface Guidelines: https://developer.apple.com/design/human-interface-guidelines
 - Materials: https://developer.apple.com/design/human-interface-guidelines/materials
@@ -9,7 +9,7 @@ Official sources checked on 2026-06-02:
 - Liquid Glass overview: https://developer.apple.com/documentation/technologyoverviews/liquid-glass
 - Adopting Liquid Glass: https://developer.apple.com/documentation/technologyoverviews/adopting-liquid-glass
 
-Use these notes as a condensed working guide. If a user asks for current Apple behavior, SDK-specific APIs, or exact HIG wording, browse the official docs before answering.
+Use these notes as a condensed working guide. Apple Developer pages may require JavaScript in a browser, so treat the links above as official source anchors and browse or inspect the live docs before answering questions about exact current Apple behavior, SDK-specific APIs, or exact HIG wording.
 
 ## Core HIG Translation
 
